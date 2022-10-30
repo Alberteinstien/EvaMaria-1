@@ -22,7 +22,7 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('⭕️Join Our Group⭕️', url='https://t.me/mmf_chat')
+                InlineKeyboardButton('⭕️Join Channel⭕️', url='https://t.me/malayalam_movie_factory_2')
             ],
             [
                 InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -43,8 +43,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')')
             ],[
-            InlineKeyboardButton('🔍 Search in our Group🔘', url=f'https://t.me/mmf_chat').
-            InlineKeyboardButton('⭕️Join MMF SERIES⭕️', url='https://t.me/MMF_series')
+            InlineKeyboardButton('🔍 Search in our Group🔘', url=f'https://t.me/movies_group_mmf').
+            InlineKeyboardButton('⭕️Join Main Channel⭕️', url='https://t.me/malayalam_movie_factory_2')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
@@ -75,17 +75,17 @@ async def start(client, message):
             btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"checksub#{message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            text="**Please Join My Updates Channel to use this Bot നിങ്ങൾ നമ്മുടെ ചാനലിൽ ജോയിൻ ചെയ്താൽ മാത്രമേ ഞാൻ മൂവി file തരുകയുള്ളു!**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode="markdown"
             )
         return
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('⭕️Join Main Channel⭕️', url=f'https://t.me/tamil_rockers_mallu')
+            InlineKeyboardButton('⭕️Join Main Channel⭕️', url=f'https://t.me/malayalam_movie_factory_2')
             ],[
-            InlineKeyboardButton('🔍 Search in our Group', url=f'https://t.me/mmf_chat'),
-            InlineKeyboardButton('⭕️JOIN MMF SERIES⭕️', url='https://t.me/MMF_series')
+            InlineKeyboardButton('🔍 Search in our Group', url=f'https://t.me/movies_group_mmf'),
+            InlineKeyboardButton('⭕️JOIN ⭕️', url='https://t.me/MMF_series')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
